@@ -1,38 +1,25 @@
 {
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "X-Frame-Options", "value": "DENY" }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://alkodostavka-seven.vercel.app/",
+      "permanent": true
     },
     {
-      "source": "*.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/style.css",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=604800"
-        }
-      ]
-    },
-    {
-      "source": "/script.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=604800"
-        }
-      ]
+      "source": "/(.*)",
+      "destination": "https://alkodostavka-seven.vercel.app/$1",
+      "permanent": true
     }
   ]
 }
