@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "https://dastavka-alkogolya-24.vercel.app/",
+      "destination": "https://dostavkaalkogolya-24.vercel.app/",
       "permanent": true
     },
     {
       "source": "/(.*)",
-      "destination": "https://dastavka-alkogolya-24.vercel.app/$1",
+      "destination": "https://dostavkaalkogolya-24.vercel.app/$1",
       "permanent": true
     }
   ]
