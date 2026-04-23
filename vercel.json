@@ -1,15 +1,4 @@
 {
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Frame-Options", "value": "DENY" }
-      ]
-    }
-  ],
   "redirects": [
     {
       "source": "/",
@@ -18,7 +7,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "https:/dostavka-alkogolya-24-pdai.vercel.app/$1",
+      "destination": "https://dostavka-alkogolya-24-pdai.vercel.app/$1",
       "permanent": true
     }
   ]
